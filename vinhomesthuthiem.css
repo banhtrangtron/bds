@@ -286,7 +286,7 @@ ul.menu ul {
 background:#2c3e50;
 display:none;
 position: absolute;
-width: 190px;
+width: 230px;
 line-height: 1.785em;
 left: 0;
 border-bottom: 5px solid #2c3e50;
@@ -304,6 +304,7 @@ display: block;
 color: #fff;
 font-weight: 600;
 padding: 8px;
+width: 200px;
 }
 ul.menu ul li a:hover {
     background: #2ecc71;
