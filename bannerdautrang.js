@@ -1,13 +1,13 @@
-//please contact me nguyendinhtho2151@gmail.com
-//website http://batdongsanhcm.com.vn or https://nguyendinhtho.net
+//please contact me nguyenlinhnguyen2151@gmail.com
+//website http://batdongsanhcm.com.vn or https://nguyenlinhnguyen.net
 
 (function($) {
-    $.fn.dinhtho = function(options) {        
+    $.fn.linhnguyen = function(options) {        
         var defaults = {  
 	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
 		    closeonbackgroundclick: true, //if you click background will modal close?
-		    dismissmodalclass: 'close-dinhtho-modal' //the class of a button or element that will close an open modal
+		    dismissmodalclass: 'close-linhnguyen-modal' //the class of a button or element that will close an open modal
     	}; 
 
         var options = $.extend({}, defaults, options); 
@@ -17,12 +17,12 @@
         		topMeasure  = parseInt(modal.css('top')),
 				topOffset = modal.height() + topMeasure,
           		locked = false,
-				modalBG = $('.dinhtho-modal-bg');
+				modalBG = $('.linhnguyen-modal-bg');
 
 			if(modalBG.length == 0) {
-				modalBG = $('<div class="dinhtho-modal-bg" />').insertAfter(modal);
+				modalBG = $('<div class="linhnguyen-modal-bg" />').insertAfter(modal);
 			}		    
-			modal.bind('dinhtho:open', function () {
+			modal.bind('linhnguyen:open', function () {
 			  modalBG.unbind('click.modalEvent');
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
 				if(!locked) {
@@ -48,10 +48,10 @@
 						unlockModal()				
 					}
 				}
-				modal.unbind('dinhtho:open');
+				modal.unbind('linhnguyen:open');
 			}); 	
 
-			modal.bind('dinhtho:close', function () {
+			modal.bind('linhnguyen:close', function () {
 			  if(!locked) {
 					lockModal();
 					if(options.animation == "fadeAndPop") {
@@ -78,24 +78,24 @@
 						modalBG.css({'display' : 'none'});	
 					}		
 				}
-				modal.unbind('dinhtho:close');
+				modal.unbind('linhnguyen:close');
 			});     
    	
-    	modal.trigger('dinhtho:open')
+    	modal.trigger('linhnguyen:open')
 			
 			//Close Modal Listeners
 			var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent', function () {
-			  modal.trigger('dinhtho:close')
+			  modal.trigger('linhnguyen:close')
 			});
 			
 			if(options.closeonbackgroundclick) {
 				modalBG.css({"cursor":"pointer"})
 				modalBG.bind('click.modalEvent', function () {
-				  modal.trigger('dinhtho:close')
+				  modal.trigger('linhnguyen:close')
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('dinhtho:close'); } // 27 is the keycode for the Escape key
+        		if(e.which===27){ modal.trigger('linhnguyen:close'); } // 27 is the keycode for the Escape key
 			});
 			
 			function unlockModal() { 
@@ -115,9 +115,9 @@ $(window).load(function() {
 			document.cookie = "adfpopunder1=adf";
 			var divpopup = document.createElement("div");
 			$(divpopup).attr('id', 'myModal');
-			$(divpopup).attr('class', 'dinhtho-modal');
+			$(divpopup).attr('class', 'linhnguyen-modal');
 			$( "body" ).append(divpopup);
-			$("#myModal").html("<a href='https://goo.gl/rMRuJk' target='_blank'><img src='https://2.bp.blogspot.com/-Os3wOsXJWlQ/WiZhuVolgmI/AAAAAAAAASA/LybNd3tVXcESAOic5yyXfKxSzlQgbfbPQCLcBGAs/s1600/du-an-saigon-mystery-mobi.jpg' width='500px'/><br/>24% Khi tham quan dự án</a>. Tặng ngay Nội Thất Châu Âu <h2><a class='close-dinhtho-modal'>X</a></h2>");
-			$('#myModal').dinhtho($('#myModal').data());
+			$("#myModal").html("<a href='https://goo.gl/rMRuJk' target='_blank'><img src='https://2.bp.blogspot.com/-Os3wOsXJWlQ/WiZhuVolgmI/AAAAAAAAASA/LybNd3tVXcESAOic5yyXfKxSzlQgbfbPQCLcBGAs/s1600/du-an-saigon-mystery-mobi.jpg' width='500px'/><br/>24% Khi tham quan dự án</a>. Tặng ngay Nội Thất Châu Âu <h2><a class='close-linhnguyen-modal'>X</a></h2>");
+			$('#myModal').linhnguyen($('#myModal').data());
 		}
 });
