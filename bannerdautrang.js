@@ -117,7 +117,7 @@ $(window).load(function() {
 			$(divpopup).attr('id', 'myModal');
 			$(divpopup).attr('class', 'linhnguyen-modal');
 			$( "body" ).append(divpopup);
-			$("#myModal").html("<a href='https://goo.gl/rMRuJk' target='_blank'><img src='https://2.bp.blogspot.com/-Os3wOsXJWlQ/WiZhuVolgmI/AAAAAAAAASA/LybNd3tVXcESAOic5yyXfKxSzlQgbfbPQCLcBGAs/s1600/du-an-saigon-mystery-mobi.jpg' width='500px'/><br/>24% Khi tham quan dự án</a>. Tặng ngay Nội Thất Châu Âu <h2><a class='close-linhnguyen-modal'>X</a></h2>");
+			$("#myModal").html("<a href='https://goo.gl/rMRuJk' target='_blank'><img src='https://2.bp.blogspot.com/-Os3wOsXJWlQ/WiZhuVolgmI/AAAAAAAAASA/LybNd3tVXcESAOic5yyXfKxSzlQgbfbPQCLcBGAs/s1600/du-an-saigon-mystery-mobi.jpg' width='500px'/><br/>Chiết khấu 3 - 24% Dự án Saigon Mystery Villas</a>. Tặng ngay Nội Thất Châu Âu <h2><a class='close-linhnguyen-modal'>X</a></h2>");
 			$('#myModal').linhnguyen($('#myModal').data());
 		}
 });
